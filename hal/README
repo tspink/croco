@@ -1,0 +1,8 @@
+HAL
+
+The HAL is the hardware abstraction layer, and provides a generic way of
+controlling distributed hardware devices.  The HAL provides a service which
+may be queried for devices, and information about devices.  Operations may
+then be performed on those devices, as defined by device classes and the
+interfaces those classes expose.
+

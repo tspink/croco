@@ -1,0 +1,8 @@
+Site Specific Configuration
+
+Each system is inherently different, and this directory contains the extensions
+to the subsystems that define the specific site the system is to be deployed.
+
+The HAL will require a configuration defining the devices, and their
+communication protocols.  The Executive will require the business logic to be
+defined.  The UI will require its theme and controls to be defined.

@@ -1,0 +1,18 @@
+CROCO - Catalyst Room Control System
+===============================================================================
+
+Copyright (C) Catalyst Event Production Services 2013
+All Rights Reserved
+
+* HAL:   The HAL subsystem is responsible for communicating with distributed
+         hardware devices, anything from GPIO devices to audio routers.
+
+* EXECUTIVE:  The executive contains the logic for operating the programmed
+              system.
+              
+* UI:    The UI is responsible for interacting with the system - whether it's
+         via touch-screen, mobile device or tablet.
+
+* SITE-SPEC: The site-specific directory is for site-specific configuration for
+             deployments of the CROCO system.
+

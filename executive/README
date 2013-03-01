@@ -1,0 +1,10 @@
+Executive
+
+The Executive is a service which provides the ability to run operations on the
+programmed system.  These operations are defined by the business logic created
+for the specific site.  The Executive is a generic service, which uses
+extensions provided by the site-specific extensions, defined elsewhere.
+
+The Executive has two-way communication with the HAL; the executive may invoke
+operations on the HAL, and the HAL may inform the executive about changes in
+the hardware, and the hardware's state.

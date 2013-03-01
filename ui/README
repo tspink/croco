@@ -1,0 +1,8 @@
+UI
+
+The UI is what is presented to an operator of the system.  The UI may take the
+form of any HCI interface, provided by web-servers, native clients, etc.
+
+The UI communicates only with the Executive, to invoke operations on the system
+logic.  The Executive may communicate with the UI to advise of changes in the
+system state.
