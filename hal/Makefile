@@ -11,8 +11,8 @@ clean:		default-clean
 PHONY += all default clean
 
 # Basic Variables
-export EXTRA_C_FLAGS	:= -g -O0
-export EXTRA_LD_FLAGS	:= 
+export EXTRA_C_FLAGS	:= -g -O0 -I../libcroco/include
+export EXTRA_LD_FLAGS	:= -L../libcroco/dist -lcroco
 export Q		:= @
 export ARCH		?= $(shell uname -m)
 
@@ -48,12 +48,15 @@ export main-target-ldflags	:= $(EXTRA_LD_FLAGS)
 
 export global-cflags		:= -g -Wall $(EXTRA_C_FLAGS)
 
+export croco-lib-dir		:= $(TOPDIR)/../libcroco
+export croco-lib-lib		:= $(croco-lib-dir)/dist/libcroco.so
+
 default-all: $(real-targets-y)
 	@echo
 	@echo "  Build Complete"
 	@echo
 
-$(real-targets-y): $(main-target-builtin)
+$(real-targets-y): $(main-target-builtin) $(croco-lib-lib)
 	$(Q)$(ECHO) "  LD      $(notdir $@)"
 	$(Q)$(CC) -o $@ $(main-target-ldflags) $<
 
@@ -67,7 +70,7 @@ default-clean: .FORCE
 	@echo
 	@echo "  Clean Complete"
 	@echo
-	
+
 PHONY += default-all default-clean
 
 .FORCE:

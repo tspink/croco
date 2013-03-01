@@ -6,7 +6,7 @@
  *
  * Tom Spink <t.spink@betasafe.com>
  */
-#include <stdio.h>
+#include <croco.h>
 #include <hal.h>
 
 /**
@@ -14,6 +14,6 @@
  */
 int main(int argc, char **argv)
 {
-	printf("Hello, world.\n");
+	croco_log(LOG_INFO, "CROCO Hardware Abstraction Layer");
 	return 0;
 }

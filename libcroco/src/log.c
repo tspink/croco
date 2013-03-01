@@ -41,7 +41,7 @@ static int submit_log_entry(log_level_t level, const char *message)
 		return -1;
 	}
 
-	fprintf(stderr, "%s: %s", level_text, message);
+	fprintf(stderr, "%s: %s\n", level_text, message);
 	return 0;
 }
 
