@@ -22,7 +22,7 @@ real-ln-y		:= $(patsubst %, $(src-dir)/%, $(ln-y))
 
 ln-targets  	:= $(foreach LN,$(ln-y), $(DISTDIR)/$(notdir $(LN)))
 
-$(built-in-target): $(real-obj-y) $(real-subdirs-builtins-y)
+$(built-in-target): $(real-obj-y) $(real-subdirs-builtins-y) $(real-lds-y)
 	$(Q)$(ECHO) "  LD      $(patsubst $(SRCDIR)/%,%,$@)"
 	$(Q)$(LD) -r -o $@ $(real-ldflags-y) $^
 

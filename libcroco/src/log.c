@@ -45,7 +45,7 @@ static int submit_log_entry(log_level_t level, const char *message)
 	return 0;
 }
 
-int croco_log(log_level_t level, const char *message, ...)
+int croco_log(log_level_t level, char *message, ...)
 {
 	char buffer[512];
 	va_list va;

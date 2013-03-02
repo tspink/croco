@@ -1,1 +1,1 @@
-obj-y := log.o
+obj-y := log.o cmdline.o
